@@ -49,6 +49,11 @@ function storeData()
 
     _db.ref('mahasiswa/' + data['id']).set(data);
 
+     $('#nama_mhs').val('');
+     $('#nim_mhs').val('');
+     $('#ttl_mhs').val('');
+     $('#alamat_mhs').val('');
+
 }
 
 

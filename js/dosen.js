@@ -50,6 +50,11 @@ function storeData()
 
     _db.ref('dosen/' + data['id']).set(data);
 
+     $('#nama_dos').val('');
+     $('#nidn_dos').val('');
+     $('#ttl_dos').val('');
+     $('#keahlian_dos').val('');
+
 }
 
 
@@ -75,9 +80,9 @@ function getData(id)
         data.push(snapshot.val());
         console.log(data);
 		$('#edit_nama_dos').val(data[0]['nama']);
-        $('#edit_nim_dos').val(data[0]['nidn']);
+        $('#edit_nidn_dos').val(data[0]['nidn']);
 		$('#edit_ttl_dos').val(data[0]['ttl']);
-		$('#edit_alamat_dos').val(data[0]['keahlian']);
+		$('#edit_keahlian_dos').val(data[0]['keahlian']);
 		$('#edit_id_dos').val(data[0]['id']);
 
 			
@@ -90,9 +95,9 @@ function getData(id)
 function updateData(){
 
     var _nama = $('#edit_nama_dos').val();
-    var _nidn = $('#edit_nim_dos').val();
+    var _nidn = $('#edit_nidn_dos').val();
     var _ttl = $('#edit_ttl_dos').val();
-    var _keahlian = $('#edit_alamat_dos').val();
+    var _keahlian = $('#edit_keahlian_dos').val();
     var _id =  $('#edit_id_dos').val();
     var data = {
 
